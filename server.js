@@ -4,9 +4,14 @@ const app = express();
 const rooms = ["general", "tech", "finance", "crypto"];
 const cors = require("cors");
 
+const userRoutes = require("./routes/userRoutes");
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
+app.use("/user", userRoutes);
+
+require("./connection");
 
 const server = require("http").createServer(app);
 
