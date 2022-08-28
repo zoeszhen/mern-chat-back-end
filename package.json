@@ -20,5 +20,14 @@
     "nodemon": "2.0.19",
     "socket.io": "4.5.1",
     "validator": "13.7.0"
+  },
+  "devDependencies": {
+    "eslint": "8.23.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-n": "15.2.5",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-promise": "6.0.1"
   }
 }

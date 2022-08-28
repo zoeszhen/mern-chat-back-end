@@ -1,25 +1,25 @@
-const express = require("express");
-const app = express();
+const express = require('express')
+const app = express()
 
-const rooms = ["general", "tech", "finance", "crypto"];
-const cors = require("cors");
+const rooms = ['general', 'tech', 'finance', 'crypto']
+const cors = require('cors')
 
-const userRoutes = require("./routes/userRoutes");
+const userRoutes = require('./routes/userRoutes')
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(cors());
-app.use("/user", userRoutes);
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+app.use(cors())
+app.use('/user', userRoutes)
 
-require("./connection");
+require('./connection')
 
-const server = require("http").createServer(app);
+const server = require('http').createServer(app)
 
-const PORT = 5001;
-const io = require("socket.io")(server, {
-  cors: { origin: "http://localhost:3000", methods: ["GET", "POST"] },
-});
+const PORT = 5001
+const io = require('socket.io')(server, {
+  cors: { origin: 'http://localhost:3000', methods: ['GET', 'POST'] }
+})
 
 server.listen(PORT, () => {
-  console.log("listening to port", PORT);
-});
+  console.log('listening to port', PORT)
+})
